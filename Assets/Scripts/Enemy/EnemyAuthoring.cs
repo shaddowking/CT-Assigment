@@ -14,13 +14,8 @@ public class EnemyAuthoring : MonoBehaviour
         {
             Entity entity = GetEntity(TransformUsageFlags.Dynamic);
             AddComponent(entity, new EnemyMoveSpeed{Value = authoring.EnemySpeed});
-            AddComponent(entity,new EnemyCanBeDestroyd{CanBeDestroyd = false});
         }
     }
 
 }
 
-public struct EnemyCanBeDestroyd : IComponentData
-{
-    public bool CanBeDestroyd;
-}
